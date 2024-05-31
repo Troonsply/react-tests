@@ -1,4 +1,4 @@
-import cn from 'clsx';
+ import cn from 'clsx';
 
 import style from './Title.module.css';
 
