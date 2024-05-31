@@ -1,5 +1,6 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import {Input} from './Input';
+import {userEvent} from "@testing-library/user-event";
 
 const placeholder = 'test placeholder';
 
@@ -38,12 +39,12 @@ describe('Input', () => {
         render(<Input placeholder={placeholder} value={value} />)
         expect(screen.getByDisplayValue(value)).toBeInTheDocument();
     })
-    it('should invoke the onChange callback', () => {
+    it('should invoke the onChange callback', async () => {
         const onChange = jest.fn();
         render(<Input  placeholder={placeholder} value={value} onChange={onChange}/>)
         const element = screen.getByPlaceholderText(placeholder);
-        fireEvent.change(element, {target: {value: '123456'}})
-
-        expect(onChange).toHaveBeenCalledTimes(1)
+        // fireEvent.change(element, {target: {value: '123456'}})
+        await userEvent.type(element, '12');
+        expect(onChange).toHaveBeenCalledTimes(2);
     })
 })
