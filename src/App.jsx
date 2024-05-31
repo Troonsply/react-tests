@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '../vite.svg'
-import './App.css'
+import { useState } from 'react';
+
+import './App.css';
+import { Form } from './components/Form/Form';
+import { Input } from './components/Input';
+import { Title } from './components/Title/Title';
+import { validatePassword } from './helpers/validatePassword';
+import { wait } from './helpers/wait';
+import { Text } from './components/Text';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const onSubmit = async ({ password }) => {
+    const { success, error } = validatePassword(password);
+
+    if (!success) {
+      throw new Error(error);
+    }
+
+    await wait(1000);
+  };
+
+  const onSuccess = ({ name, password }) => {
+    setErrorMessage('');
+    setSuccessMessage(`User ${name} created with password ${password}`);
+  };
+
+  const onError = (error) => {
+    setErrorMessage(error.message);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Title>Create user</Title>
+      <Form onSubmit={onSubmit} onSuccess={onSuccess} onError={onError}>
+        <Input label="User name" name="name" />
+        <Input label="Password" name="password" type="password" />
+        <Input type="submit" value="Create user" />
+      </Form>
+      {successMessage && <Text isSuccess>{successMessage}</Text>}
+      {errorMessage && <Text isError>{errorMessage}</Text>}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
