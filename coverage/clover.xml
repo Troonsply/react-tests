@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1717418917245" clover="3.2.0">
-  <project timestamp="1717418917245" name="All files">
-    <metrics statements="45" coveredstatements="45" conditionals="25" coveredconditionals="25" methods="13" coveredmethods="13" elements="83" coveredelements="83" complexity="0" loc="45" ncloc="45" packages="8" files="9" classes="9"/>
+<coverage generated="1717488676069" clover="3.2.0">
+  <project timestamp="1717488676070" name="All files">
+    <metrics statements="71" coveredstatements="64" conditionals="38" coveredconditionals="28" methods="23" coveredmethods="19" elements="132" coveredelements="111" complexity="0" loc="71" ncloc="71" packages="11" files="14" classes="14"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="App.jsx" path="C:\Users\Имя\react-tests\src\App.jsx">
@@ -52,6 +52,15 @@
         <line num="8" count="8" type="stmt"/>
       </file>
     </package>
+    <package name="src.components.ToggleTheme">
+      <metrics statements="3" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="ToggleTheme.jsx" path="C:\Users\Имя\react-tests\src\components\ToggleTheme\ToggleTheme.jsx">
+        <metrics statements="3" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+      </file>
+    </package>
     <package name="src.constants">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="validation.js" path="C:\Users\Имя\react-tests\src\constants\validation.js">
@@ -79,7 +88,7 @@
       </file>
     </package>
     <package name="src.hooks">
-      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
       <file name="use-create-user.js" path="C:\Users\Имя\react-tests\src\hooks\use-create-user.js">
         <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <line num="5" count="2" type="stmt"/>
@@ -96,6 +105,47 @@
         <line num="24" count="12" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
         <line num="28" count="12" type="stmt"/>
+      </file>
+      <file name="use-settings.js" path="C:\Users\Имя\react-tests\src\hooks\use-settings.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.providers">
+      <metrics statements="11" coveredstatements="9" conditionals="5" coveredconditionals="1" methods="4" coveredmethods="2"/>
+      <file name="themeProvider.jsx" path="C:\Users\Имя\react-tests\src\providers\themeProvider.jsx">
+        <metrics statements="6" coveredstatements="5" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+      <file name="useTheme.js" path="C:\Users\Имя\react-tests\src\providers\useTheme.js">
+        <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="9" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <file name="renderWithProviders.js" path="C:\Users\Имя\react-tests\src\utils\renderWithProviders.js">
+        <metrics statements="9" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
       </file>
     </package>
   </project>
